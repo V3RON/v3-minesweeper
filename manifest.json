@@ -1,7 +1,7 @@
 {
 	"name": "Minesweeper",
 	"short_name": "Minesweeper",
-	"start_url": "/v3-minesweeper",
+	"start_url": "/",
 	"display": "standalone",
 	"orientation": "portrait",
 	"background_color": "#fff",
