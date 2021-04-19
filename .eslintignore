@@ -1,0 +1,8 @@
+node_modules
+/build
+/*.log
+.yarn
+.yarnrc
+.yarnrc.yml
+preact.config.js
+tailwind.config.js

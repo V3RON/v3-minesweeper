@@ -1,0 +1,56 @@
+$item-size: 64px;
+
+@keyframes followWindowBorders {
+	from {
+		left: 0;
+		bottom: 0;
+		transform: rotate(0);
+	}
+	25% {
+		left: 0;
+		bottom: calc(100% - #{$item-size});
+		transform: rotate(90deg);
+	}
+	50% {
+		left: calc(100% - #{$item-size});
+		bottom: calc(100% - #{$item-size});
+		transform: rotate(180deg);
+	}
+	75% {
+		left: calc(100% - #{$item-size});
+		bottom: 0;
+		transform: rotate(270deg);
+	}
+	to {
+		left: 0;
+		bottom: 0;
+		transform: rotate(360deg);
+	}
+}
+
+.root {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	font-size: $item-size;
+	overflow: hidden;
+}
+
+.item {
+	height: $item-size;
+	width: $item-size;
+
+	animation-name: followWindowBorders;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	position: absolute;
+
+	@for $i from 1 through 20 {
+		&:nth-child(#{$i}) {
+			animation-delay: -#{$i/2}s;
+		}
+	}
+}
