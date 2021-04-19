@@ -6,7 +6,7 @@ import { Card } from '../components/Card';
 import { WindowBorder } from '../components/WindowBorder';
 import { Button } from '../components/Button';
 
-export const MainPage: FunctionComponent = () => {
+const MainPage: FunctionComponent = () => {
 	const dispatch = useAppDispatch();
 
 	const runGame = (difficulty: GAME_DIFFICULTY) => {
@@ -32,3 +32,5 @@ export const MainPage: FunctionComponent = () => {
 		</>
 	);
 };
+
+export default MainPage;

@@ -10,7 +10,7 @@ import {
 } from '../store';
 import { Board } from '../components/Board';
 
-export const GamePage: FunctionComponent = () => {
+const GamePage: FunctionComponent = () => {
 	const dispatch = useAppDispatch();
 	const xRayMode = useAppSelector(getXRayMode);
 
@@ -27,3 +27,5 @@ export const GamePage: FunctionComponent = () => {
 		</div>
 	);
 };
+
+export default GamePage;
