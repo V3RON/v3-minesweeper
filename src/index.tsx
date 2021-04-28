@@ -1,9 +1,12 @@
-import { FunctionComponent, h } from 'preact';
+import { FunctionComponent, h, options } from 'preact';
 import { Provider } from 'react-redux';
 
 import './style';
 import store from './store/store';
 import { Router } from './components/Router';
+
+// Fix: Cannot set property '__h' of null
+options.debounceRendering = setTimeout;
 
 const App: FunctionComponent = () => {
 	return (

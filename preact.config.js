@@ -6,5 +6,10 @@ module.exports = (config, env, helpers) => {
 		// Add tailwind css at the top.
 		plugins.unshift(require('tailwindcss'));
 	});
+
+	if (process.env.NODE_ENV === 'production') {
+		config.output.publicPath = '/v3-minesweeper/';
+	}
+
 	return config;
 };
